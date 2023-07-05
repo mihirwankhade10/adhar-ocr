@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Result Page</title>
+  <link rel="stylesheet" href="../css/result.css">
+</head>
+<body>
+  <h1>Extracted Text:</h1>
+  <p>Name: <%= extractedText.name %></p>
+  <p>DOB: <%= extractedText.dob %></p>
+  <p>Gender: <%= extractedText.gender %></p>
+  <p>Aadhaar Number: <%= extractedText.aadhaar %></p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="../css/result.css">
+</head>
+<body>
+  <h1>Result</h1>
+  <% if (extractedText) { %>
+    <h2>Extracted Text:</h2>
+    <p>Name: <%= extractedText.name %></p>
+    <p>Date of Birth: <%= extractedText.dob %></p>
+    <p>Gender: <%= extractedText.gender %></p>
+    <p>Aadhaar Number: <%= extractedText.aadhaar %></p>
+  <% } %>
+  
+  <% if (uploadedImage) { %>
+    <h2>Uploaded Image:</h2>
+    <img src="/uploads/<%= uploadedImage %>" alt="Uploaded Image" />
+  <% } %>
+</body>
+</html>
+
+
+
+
+
